@@ -3,11 +3,11 @@
         "id": "d8b6cfed3b908bf3",
         "type": "subflow",
         "name": "OSCAR Services",
-        "info": "<main>\n    <section>\n        <article>\n            <h3>About OSCAR Service Node</h3>\n            <p>This node includes different use cases of applications that use the OSCAR framework from a single node for event-driven high-throughput processing of files:</p>\n            <ul>\n                <li>\n                    <p></p><a rel=\"stylesheet\" href=\"https://github.com/indigo-dc/plant-classification-theano\">Plants Classification:</a> an application that performs plant classification using Lasagne/Theano.</p>\n                </li>\n                <li>\n                    <p><a rel=\"stylesheet\" href=\"https://www.imagemagick.org/\">ImageMagick:</a> a tool to manipulate images.</p>\n                </li>\n                <li>  \n                    <p><a rel=\"stylesheet\" href=\"https://en.wikipedia.org/wiki/Cowsay\">Cowsay:</a> a simple toy application to show the operation of OSCAR's synchronous invocations.</p>\n                </li>\n                <li>\n                    <p><a rel=\"stylesheet\" href=\"https://pypi.org/project/google-speech/\">Text Speech:</a> by using the Google Speech library, getting plain text audio files.</p>\n                </li>\n            </ul>\n            <p>Note: If you have another service installed in the OSCAR cluster, you must contact the developers of this node to be able to include it in the functionalities of this node or create a new one that is capable of accessing the new service.</p>\n        </article>\n        <article>\n            <h3>Inputs</h3>\n            <p>The input variables will be the basic variables (OSCAR server url and credentials). In addition to the name that has been given to the service that you want to run:</p>\n            <ul>\n                <li><p>cowsay</p></li>\n                <li><p>plants</p></li>\n                <li><p>grayify</p>\n                </li><li><p>text-to-speech-google</p></li>\n            </ul>\n            <p>Inside the <code>msg.payload</code> entry must be the text or image that you want to execute depending on the service executed. With all these elements, the service token is searched and then a request is made to the service ( POST /run/{serviceName})<a rel=\"stylesheet\" href=\"https://docs.oscar.grycap.net/api/\">[1] </a>.</p>\n        </article>\n        <article>\n            <h3>Outputs</h3>\n            <p>The node returns through <code>msg.payload</code>, depending on the executed service, the associated output type:</p>\n            <ul>\n                <li><p>text</p></li>\n                <li><p>image</p></li>\n                <li><p>audio</p></li>\n            </ul>\n            <p>In the case of audio and image, these are output in base64 format. These results can be visualized with several of the nodes present in the dashboard.</p>\n        </article>\n    </section>\n</main>\n<footer>\n    GryCAP\n</footer>",
+        "info": "<main>\n    <section>\n        <article>\n            <h3>About OSCAR Service Node</h3>\n            <p>This node includes different use cases of applications that use the OSCAR framework from a single node for event-driven high-throughput processing of files:</p>\n            <ul>\n                <li>\n                    <p></p><a rel=\"stylesheet\" href=\"https://github.com/indigo-dc/plant-classification-theano\">Plants Classification:</a> an application that performs plant classification using Lasagne/Theano.</p>\n                </li>\n                <li>\n                    <p><a rel=\"stylesheet\" href=\"https://www.imagemagick.org/\">ImageMagick:</a> a tool to manipulate images.</p>\n                </li>\n                <li>  \n                    <p><a rel=\"stylesheet\" href=\"https://en.wikipedia.org/wiki/Cowsay\">Cowsay:</a> a simple toy application to show the operation of OSCAR's synchronous invocations.</p>\n                </li>\n                <li>\n                    <p><a rel=\"stylesheet\" href=\"https://pypi.org/project/google-speech/\">Text Speech:</a> by using the Google Speech library, getting plain text audio files.</p>\n                </li>\n            </ul>\n            <p>Note: If you have another service installed in the OSCAR cluster, you must contact the developers of this node to be able to include it in the functionalities of this node or create a new one that is capable of accessing the new service.</p>\n        </article>\n        <article>\n            <h3>Inputs</h3>\n            <p>The input variables will be the basic variables (OSCAR server url and credentials). In addition to the name that has been given to the service that you want to run:</p>\n            <ul>\n                <li><p>cowsay</p></li>\n                <li><p>plants</p></li>\n                <li><p>grayify</p>\n                </li><li><p>text-to-speech-google</p></li>\n            </ul>\n            <p>Inside the <code>msg.payload</code> entry must be the text or image that you want to execute depending on the service executed. With all these elements, the service token is searched and then a request is made to the service ( POST /run/{serviceName})<a rel=\"stylesheet\" href=\"https://docs.oscar.grycap.net/api/\">[1] </a>.</p>\n        </article>\n        <article>\n            <h3>Outputs</h3>\n            <p>The node returns through <code>msg.payload</code>, depending on the executed service, the associated output type:</p>\n            <ul>\n                <li><p>text</p></li>\n                <li><p>image</p></li>\n                <li><p>audio</p></li>\n            </ul>\n            <p>In the case of audio and image, these are output in base64 format. These results can be visualized with several of the nodes present in the dashboard.</p>\n        </article>\n    </section>\n</main>\n<footer>\n    GRyCAP (Grupo de Grid y Computación de Altas Prestaciones) - UPV\n</footer>",
         "category": "",
         "in": [
             {
-                "x": 120,
+                "x": 40,
                 "y": 100,
                 "wires": [
                     {
@@ -18,8 +18,8 @@
         ],
         "out": [
             {
-                "x": 1960,
-                "y": 180,
+                "x": 1700,
+                "y": 200,
                 "wires": [
                     {
                         "id": "612cdd4d9de28e9a",
@@ -69,10 +69,13 @@
             "keywords": "node-red,oscar",
             "license": "Apache-2.0"
         },
+        "credentials": {
+            "Password": ""
+        },
         "color": "#3FADB5",
         "status": {
-            "x": 1700,
-            "y": 60,
+            "x": 1800,
+            "y": 80,
             "wires": [
                 {
                     "id": "bc7c6b31c99518ad",
@@ -136,7 +139,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 240,
+        "x": 160,
         "y": 100,
         "wires": [
             [
@@ -176,7 +179,7 @@
         "checkall": "false",
         "repair": false,
         "outputs": 4,
-        "x": 480,
+        "x": 310,
         "y": 240,
         "wires": [
             [
@@ -204,7 +207,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
+        "x": 310,
         "y": 160,
         "wires": [
             [
@@ -231,7 +234,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 680,
+        "x": 480,
         "y": 160,
         "wires": [
             [
@@ -255,7 +258,7 @@
         "authType": "basic",
         "senderr": true,
         "headers": [],
-        "x": 850,
+        "x": 650,
         "y": 160,
         "wires": [
             [
@@ -287,7 +290,7 @@
         "propout": "payload",
         "object": "msg",
         "objectout": "msg",
-        "x": 990,
+        "x": 790,
         "y": 160,
         "wires": [
             [
@@ -306,7 +309,7 @@
         "initialize": "// Code added here will be run once\n// whenever the node is started.\n//flow.set(\"token_cowsay\",\"\");\n",
         "finalize": "",
         "libs": [],
-        "x": 1130,
+        "x": 920,
         "y": 160,
         "wires": [
             [
@@ -319,13 +322,13 @@
         "type": "function",
         "z": "d8b6cfed3b908bf3",
         "name": "Send token",
-        "func": "var servicio=msg.service;\nvar token = msg.token;\n\n\nmsg.headers = {\n    Authorization: \"Bearer \" + token\n}\nif (servicio==\"cowsay\"){\n     msg.payload = {\n         \"message\": msg.data\n\n     }\n }\nelse if (servicio == \"grayify\"){\n    msg.payload = msg.data;\n }\nelse if (servicio == \"plants\"){\n    msg.payload = msg.data;\n }\nelse if (servicio == \"text-to-speech-google\"){\n    msg.payload = msg.data;\n }\n\nmsg.url = msg.oscar_server+\"/run/\"+servicio;\n\nreturn msg;\n\n",
+        "func": "var servicio=msg.service;\nvar token = msg.token;\n\n\nmsg.headers = {\n    Authorization: \"Bearer \" + token\n}\nif (servicio==\"cowsay\"){\n    msg.payload = {\n        \"message\": msg.data\n    }\n }\nelse if (servicio == \"grayify\"){\n    msg.payload = msg.data;\n }\nelse if (servicio == \"plants\"){\n    msg.payload = msg.data;\n }\nelse if (servicio == \"text-to-speech-google\"){\n    msg.payload = msg.data;\n }\n\nmsg.url = msg.oscar_server+\"/run/\"+servicio;\n\nreturn msg;\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
+        "x": 130,
         "y": 220,
         "wires": [
             [
@@ -340,7 +343,7 @@
         "name": "",
         "action": "",
         "property": "payload",
-        "x": 780,
+        "x": 560,
         "y": 260,
         "wires": [
             [
@@ -364,12 +367,11 @@
         "authType": "",
         "senderr": true,
         "headers": [],
-        "x": 990,
-        "y": 240,
+        "x": 790,
+        "y": 220,
         "wires": [
             [
-                "0a7533b55bc39124",
-                "a2223e70f98ffcec"
+                "0a7533b55bc39124"
             ]
         ]
     },
@@ -388,6 +390,11 @@
             },
             {
                 "t": "eq",
+                "v": "text-to-speech-google",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
                 "v": "grayify",
                 "vt": "str"
             },
@@ -395,30 +402,25 @@
                 "t": "eq",
                 "v": "plants",
                 "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "text-to-speech-google",
-                "vt": "str"
             }
         ],
         "checkall": "false",
         "repair": false,
         "outputs": 4,
-        "x": 1160,
-        "y": 240,
+        "x": 960,
+        "y": 220,
         "wires": [
             [
                 "612cdd4d9de28e9a"
             ],
             [
-                "dc78b56748e1113a"
-            ],
-            [
-                "dc78b56748e1113a"
-            ],
-            [
                 "7666d6de025df290"
+            ],
+            [
+                "dc78b56748e1113a"
+            ],
+            [
+                "dc78b56748e1113a"
             ]
         ]
     },
@@ -429,8 +431,8 @@
         "name": "",
         "action": "",
         "property": "payload",
-        "x": 1520,
-        "y": 280,
+        "x": 1400,
+        "y": 260,
         "wires": [
             [
                 "612cdd4d9de28e9a"
@@ -457,8 +459,8 @@
         "propout": "payload",
         "object": "msg",
         "objectout": "msg",
-        "x": 1350,
-        "y": 240,
+        "x": 1230,
+        "y": 300,
         "wires": [
             [
                 "7666d6de025df290"
@@ -476,7 +478,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
+        "x": 340,
         "y": 80,
         "wires": [
             [],
@@ -504,8 +506,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1450,
-        "y": 100,
+        "x": 1710,
+        "y": 140,
         "wires": [
             []
         ]
@@ -578,10 +580,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1810,
-        "y": 160,
+        "x": 1550,
+        "y": 200,
         "wires": [
-            []
+            [
+                "a2223e70f98ffcec"
+            ]
         ]
     }
 ]
